@@ -1,0 +1,174 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f6f9;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* User List Styles */
+#user-list {
+    margin-top: 20px;
+    position: relative;
+}
+
+.user-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.user-card:hover {
+    transform: translateY(-4px);
+    background-color: #f0f9ff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.user-card div p {
+    color: #555;
+    margin: 3px 0;
+}
+
+.user-card button {
+    background: #4CAF50;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    margin: 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.user-card button:hover {
+    background: #45a049;
+}
+
+.user-card button:nth-child(2) {
+    background: #f44336;
+}
+
+.user-card button:nth-child(2):hover {
+    background: #d32f2f;
+}
+
+/* Form Styles */
+#user-form {
+    display: none;
+    flex-direction: column;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+#user-form.show {
+    display: flex;
+}
+
+#form-title {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+label {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+/* Buttons */
+button {
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button[onclick="submitForm()"] {
+    background-color: #4CAF50;
+}
+
+button[onclick="closeForm()"] {
+    background-color: #f44336;
+}
+
+/* Add User Button */
+button[onclick="openForm()"] {
+    width: 100%;
+    background-color: #4CAF50;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+/* Error Message */
+.error-message {
+    color: #f44336;
+    font-weight: 500;
+    margin-top: 10px;
+    text-align: center;
+}
+
