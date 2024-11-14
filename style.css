@@ -172,3 +172,22 @@ button[onclick="openForm()"] {
     text-align: center;
 }
 
+
+
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .user-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .user-card button {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    #user-form {
+        padding: 15px;
+    }
+}
